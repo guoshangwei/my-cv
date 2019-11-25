@@ -75,6 +75,22 @@
 % publication style
 \renewcommand*{\bibfont}{\paragraphstyle}
 
+% CV talk
+\newenvironment{cvtalks}{%
+    \vspace{\acvSectionContentTopSkip}
+    \vspace{-2mm}
+    \begin{center}
+        \setlength\tabcolsep{0pt}
+        \setlength{\extrarowheight}{0pt}
+        \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2cm} L{\textwidth - 2cm}}
+            }{%
+        \end{tabular*}
+    \end{center}
+}
+\newcommand*{\cvtalk}[2]{%
+\honordatestyle{#2} & \honortitlestyle{#1} \\
+}
+
 % CV award
 \newenvironment{cvawards}{%
     \vspace{\acvSectionContentTopSkip}
